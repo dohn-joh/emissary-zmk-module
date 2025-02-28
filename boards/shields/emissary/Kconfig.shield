@@ -1,0 +1,5 @@
+config SHIELD_EMISSARY_MAIN
+    def_bool $(shields_list_contains,emissary_main)
+
+config SHIELD_EMISSARY_DONGLE
+    def_bool $(shields_list_contains,emissary_dongle)
