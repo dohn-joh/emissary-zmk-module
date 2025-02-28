@@ -162,8 +162,8 @@
         compatible = "zmk,combos";
      /* COMBO(NAME, BINDING, KEYPOS, LAYERS, TIME) */
         COMBO(softoff, &soft_off, 32 33 34, BASE, 15)
-        COMBO(m1, U_BTN1, 4 14, BASE, 15)
-        COMBO(m2, U_BTN2, 5 15, BASE, 15)
+        COMBO(m1, &mkp LCLK, 4 14, BASE, 15)
+        COMBO(m2, &mkp RCLK, 5 15, BASE, 15)
         COMBO(ldelete, &kp DEL, 12 13, BASE, 25)
         COMBO(rdelete, &kp DEL, 18 19, BASE GAME, 25)
         COMBO(tab, &kp TAB, 14 15, BASE, 30)
@@ -248,10 +248,10 @@
 
         mouse {
             bindings = <
-    &tog MOUSE U_WH_U U_MS_U U_WH_D &tog MOUSE                                        &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE
-    &tog MOUSE U_MS_L U_MS_D U_MS_R &tog MOUSE                                        &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE
-    &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE U_BTN3 &tog MOUSE                            &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE
-                                &tog MOUSE U_BTN1 U_BTN2            &tog MOUSE U_BTN1 &tog MOUSE >;
+    &tog MOUSE &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &tog MOUSE                                        &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE
+    &tog MOUSE &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &tog MOUSE                                        &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE
+    &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE &mkp MCLK &tog MOUSE                            &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE &tog MOUSE
+                                &tog MOUSE &mkp LCLK &mkp RCLK            &tog MOUSE &mkp LCLK &tog MOUSE >;
         };
     };
 };
