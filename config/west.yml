@@ -11,9 +11,5 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    # - name: zmk
-    #   remote: dohn
-    #   revision: main
-    #   import: app/west.yml
   self:
     path: config
